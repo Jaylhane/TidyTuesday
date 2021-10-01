@@ -105,7 +105,7 @@ dados$year <- as.integer(dados$year)
 #  arrange(desc(freq)))[1:15,] %>% 
 
 loadfonts(device = "win")
-font_import(paths = 'D:/jaylh/Documents/Pessoal/Fontes/Instaladas R')
+font_import(paths = 'Your Path/Fonts/Installeds R')
 
 evol_nber <- dados %>%
   ggplot(aes(x=freq, y=reorder(program_desc, freq), fill=program_category))+
@@ -182,4 +182,4 @@ dados %>%
 #anim_save("evolution-NBER-with-gganimate.gif", height = 900, width = 1600, dpi=320)
 
 anim <- animate(evol_nber, nframes = 300, fps = 8,renderer = gifski_renderer(), height = 900, width = 1600)
-anim_save(path = "D:/jaylh/Documents/Análises Independentes/R/TidyTuesday/2021/2021-09-28", filename = "evolution-NBER-with-gganimate.gif", animation = anim)
+anim_save(path = "Your Path/R/TidyTuesday/2021/2021-09-28", filename = "evolution-NBER-with-gganimate.gif", animation = anim)
